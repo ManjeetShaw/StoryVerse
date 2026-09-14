@@ -1,0 +1,6 @@
+{
+  "name": "Storyverse",
+  "description": "Turn your ideas and dreams into full illustrated storybooks with narrative text and custom AI art.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

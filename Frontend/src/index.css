@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+.font-craft-serif {
+  font-family: 'Newsreader', Georgia, Cambria, serif;
+  font-feature-settings: "liga" 1, "kern" 1;
+}
+
+/* Subtle dot halftone pattern matching sky background */
+.halftone-dots {
+  background-image: radial-gradient(#6B9ECA 1.1px, transparent 1.1px);
+  background-size: 15px 15px;
+  opacity: 0.32;
+}
+
+/* Torn Paper Mask Edge simulation */
+.torn-paper-edge-top {
+  clip-path: polygon(
+    0% 18px, 
+    3% 7px, 
+    7% 22px, 
+    12% 5px, 
+    18% 20px, 
+    24% 8px, 
+    30% 24px, 
+    37% 6px, 
+    43% 19px, 
+    49% 7px, 
+    55% 23px, 
+    61% 6px, 
+    68% 21px, 
+    74% 8px, 
+    81% 25px, 
+    87% 6px, 
+    93% 20px, 
+    97% 9px, 
+    100% 19px, 
+    100% 100%, 
+    0% 100%
+  );
+}
+
+.torn-paper-edge-top-subtle {
+  clip-path: polygon(
+    0% 10px, 
+    4% 3px, 
+    9% 12px, 
+    15% 4px, 
+    21% 14px, 
+    28% 5px, 
+    35% 13px, 
+    42% 4px, 
+    50% 15px, 
+    57% 5px, 
+    64% 13px, 
+    71% 4px, 
+    79% 14px, 
+    86% 5px, 
+    93% 13px, 
+    100% 6px, 
+    100% 100%, 
+    0% 100%
+  );
+}
+
+/* Soft drop shadows */
+.craft-btn-shadow {
+  box-shadow: 0 10px 24px -4px rgba(17, 19, 23, 0.22), 0 4px 10px -2px rgba(17, 19, 23, 0.1);
+}
+
+.craft-card-shadow {
+  box-shadow: 0 18px 38px -10px rgba(18, 42, 68, 0.22), 0 6px 14px -3px rgba(18, 42, 68, 0.12);
+}
+
+/* Continuous Film Reel Marquee Keyframes */
+@keyframes reelScrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes reelScrollDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-reel-up {
+  animation: reelScrollUp 42s linear infinite;
+}
+
+.animate-reel-down {
+  animation: reelScrollDown 46s linear infinite;
+}
+
+.pause-on-hover:hover .animate-reel-up,
+.pause-on-hover:hover .animate-reel-down {
+  animation-play-state: paused;
+}
+
+/* Filmstrip sprocket holes simulation */
+.filmstrip-sprockets {
+  background-image: radial-gradient(circle, #d9e6f2 35%, transparent 40%);
+  background-size: 14px 14px;
+}
